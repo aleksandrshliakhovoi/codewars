@@ -23,3 +23,104 @@ def prime_factors(n)
 	end
   factors
 end
+
+
+# require 'prime'
+# def prime_factors(n)
+#   n.prime_division.flat_map { |prime, amt| [prime] * amt }
+# end
+
+
+# require 'prime'
+# def prime_factors(n)
+#   Prime.prime_division(n).flat_map { |f, p| [f] * p }
+# end
+
+
+# def prime_factors(n)
+#   prime_factors = []
+
+#   div = 2
+#   while n != 1
+#     if n % div == 0 
+#       prime_factors << div
+#       n /= div
+#     else
+#       div += 1
+#     end
+#   end
+
+#   prime_factors
+# end
+
+
+
+# def prime_factors(n)
+#   prime_factors = []
+
+#   div = 2
+#   while n != 1
+#     if n % div == 0 && is_prime(div)
+#       prime_factors << div
+#       n /= div
+#     else
+#       div += 1
+#     end
+#   end
+
+#   prime_factors
+# end
+
+# def is_prime(n)
+#   (2..Math.sqrt(n)).none? { |d| n % d == 0 }
+# end
+
+
+
+
+# def prime_factors(n)
+#   arr = []
+#   recurse(n, arr)
+# end
+ 
+#  def recurse(n, arr)
+#    if n == 1
+#      return arr
+#    end
+#   (2..n).each do |i|
+#      if n % i == 0
+#        arr << i
+#       return recurse(n / i, arr)
+#      end
+#    end
+#  end
+
+#  require 'prime'
+
+# def prime_factors(n)
+#   Prime.prime_division(n).reduce([]) { |acc, (x,y)|
+#     y.times { acc << x }
+#     acc
+#   }
+# end
+
+
+# def prime_factors(n)
+#   result = []
+#   divs = 2
+#   until n == 1 do
+#     if n % divs == 0
+#       n = n / divs
+#       result << divs
+#     else
+#       divs += 1
+#     end
+#   end
+#   result
+# end
+
+
+# def prime_factors(n)
+#   require 'prime'
+#   n.prime_division.map{|d, m| [d]*m}.flatten
+# end
